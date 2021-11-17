@@ -98,3 +98,42 @@ Comments
 | content | String | what the users post |
 | likeCount | Number | amount of like a comment get |
 | createdAt | DateTime | Date when the comment started |
+
+## Networking
+
+**List Of Network Requests by Screen**
+
+* Category Screen
+   * (Read/GET) - Retrieve all news categories
+* Chats screen
+   * (Read/GET) - Existing Chat
+   * (Create/POST) - Create a new chat comment
+   * (Delete) - Delete existing chat comment
+* Feed/Home Screen
+   * (Read/GET) - Headlines / current event posts
+   * (Read/GET) - Chats
+   *  (Read/GET) - Comments
+* News Article Screen
+   * (Read/GET) - Article post
+   * (Read/GET) - Comments for on articles
+   * (Read/GET) - chats attached to articles
+   * (Delete) - Delete existing article chat comment
+   * (Create/POST) - Create a new article chat comment
+* Settings Screen
+   * (Read/GET) Query logged in user object
+   * (Update/PUT) Update user profile image
+
+An Api for Current News:
+
+* Base Url - https://newsapi.org
+
+| HTTP Verb | Endpoint | Description |
+| -------------- | --------- | ---- |
+| GET  | /v2/top-headlines | returns breaking news headlines for countries, categories, and singular publishers.|
+| GET | /v2/top-headlines/sources | returns information (including name, description, and category) about the most notable sources available for obtaining top headlines from.|
+| GET | /v2/top-headlines?country=us&category=business | top business headlines |
+| GET | /v2/top-headlines?country=us&category=entertainment | top entertainment headlines |
+| GET | /v2/top-headlines?country=us&category=business | top business headlines |
+| GET | /v2/top-headlines?country=us&category=sports | top sports headlines |
+| GET | /v2/top-headlines?country=us&category=science | top science headlines |
+| GET | /v2/top-headlines?country=us&category=technology | top technology headlines |
